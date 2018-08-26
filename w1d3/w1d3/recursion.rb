@@ -11,7 +11,7 @@ def recursion_sum(array)
   array[0] + recursion_sum(array[1..-1])
 end
 
-def itteration_sum(array)
+def iteration_sum(array)
   array.inject(:+)
 end
 
@@ -84,6 +84,9 @@ def iterative_fib(n)
   ret = [1,1]
 
   until ret.length >= n
+    p ret
+    p ret[-1]
+    p ret[-2]
     ret << ret[-1] + ret[-2]
   end
   ret
